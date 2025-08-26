@@ -1,0 +1,23 @@
+name: Second Workflow
+on: [push]
+
+jobs:
+    run_first-command:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Display node Version on Ubunty
+          run: node -v
+     
+    run-paralel-commad:        
+      runs-on: windows-latest
+      steps:
+        - name: Display node Version on Windiws
+          run: node -v
+    
+    run-second-comand:
+      runs-on: macos-latest
+      needs: run_first-command
+      steps:
+        - name: Displey Node Version on MacOs
+          run: node -v
+
