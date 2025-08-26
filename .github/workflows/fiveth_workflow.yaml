@@ -2,7 +2,7 @@ name: Fiveth Workflow
 on:
   issues:
     types: [edited, deleted]
-  pull_reqest:
+  pull_request:
     types: [assigned, closed]
 jobs:
     run_first-command:
