@@ -6,7 +6,13 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Comand in Multiline
-          run:
-            pwd
-            ls -a
+          run: ls -a
+        - name: Copy Files
+          run: |
+            git init
+            git remote add origin "https://$GITHUB_ACTOR:${{secret.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+            git fetch origin
+            git checkout main
+        - name: List Files
+          run: ls -a
      
