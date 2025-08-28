@@ -13,4 +13,3 @@ jobs:
               "echo ${{ toJson(runner) }}"
               "echo ${{ toJson(job) }}"
               "echo ${{ toJson(steps) }}"
-              
