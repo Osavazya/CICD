@@ -1,0 +1,16 @@
+name: TenWorkflow
+on: [push]
+  
+  
+jobs:
+    run_first-command:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Contex
+            id: context-expression
+            run: |
+              echo ${{ toJson(github) }}
+              echo ${{ toJson(runner) }}
+              echo ${{ toJson(job) }}
+              echo ${{ toJson(steps) }}
+              

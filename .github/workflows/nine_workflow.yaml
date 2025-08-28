@@ -10,5 +10,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Event Vars
-            run: echo ${{ github.event.client_playload.titleTest }}
+            run: echo ${{ gi thub.event.client_playload.titleTest }}
               
