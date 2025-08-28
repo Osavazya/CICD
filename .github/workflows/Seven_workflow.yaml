@@ -19,6 +19,7 @@ on:
             default: "Value 2"
         checkCustoms:
              description: CheckBocx
+             type: boolean
              required: false
   
 jobs:
