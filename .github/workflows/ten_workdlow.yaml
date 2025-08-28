@@ -1,15 +1,16 @@
-name: TenWorkflow
+name: Ten Workflow
 on: [push]
-  
-  
+
 jobs:
-    run_first-command:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Contex
-            id: context-expression
-            run: |
-              "echo ${{ toJson(github) }}"
-              "echo ${{ toJson(runner) }}"
-              "echo ${{ toJson(job) }}"
-              "echo ${{ toJson(steps) }}"
+  run-first-command:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Contexts and Expressions
+        run: |
+          echo "${{ toJson(github) }}"
+          echo "${{ toJson(runner) }}"
+          echo "${{ toJson(job) }}"
+          echo "${{ toJson(steps) }}"
