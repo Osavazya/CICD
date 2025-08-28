@@ -9,8 +9,8 @@ jobs:
           - name: Contex
             id: context-expression
             run: |
-              echo ${{ toJson(github) }}
-              echo ${{ toJson(runner) }}
-              echo ${{ toJson(job) }}
-              echo ${{ toJson(steps) }}
+              'echo ${{ toJson(github) }}'
+              'echo ${{ toJson(runner) }}'
+              'echo ${{ toJson(job) }}
+              'echo ${{ toJson(steps) }}
               
