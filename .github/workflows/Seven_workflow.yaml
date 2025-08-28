@@ -1,0 +1,32 @@
+name: SEight Workflow
+on:
+  workflow_dispatch:
+    inputs:
+        titleCustom:
+            description: Tepe the Title
+            type: string
+            required: true
+            default: "Hello W"
+        selectCustoms:
+            description: Select Value
+            type: choice
+            required: true
+            options:
+              - Value 1
+              - Value 2
+              - Value 3
+              - Value 4
+            default: "Value 2"
+        checkCustoms:
+             description: CheckBocx
+             required: false
+  
+jobs:
+    run_first-command:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Event Vars
+            run: |
+              echo "Title: ${{ inputs.titleCustom }}"
+              echo "Title: ${{ inputs.selectCus }}"
+              echo "Title: ${{ checkCustoms }}"
