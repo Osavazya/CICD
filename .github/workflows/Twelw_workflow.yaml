@@ -4,8 +4,9 @@ on: [push]
 jobs:
     run_first-command:
         runs-on: ubuntu-latest
+        environment: "prod"
         steps:
-          - name: Varsц and Secret
+          - name: Varsa and Secret
             run: |
               echo '${{ vars.STATUS }}'
               echo '${{ secrets.PASSWORD }}'
