@@ -3,7 +3,7 @@ on: push
 
 jobs:
   job:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: First Step
         run: sleep 30
