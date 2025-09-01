@@ -1,0 +1,14 @@
+name: Seventeenth Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      title: 
+        description: "Custom file"
+        type: string
+        default: "Test text"
+        required: false
+jobs:
+  call-workflow:
+    uses: ./github/workflows/workflow.yaml
+    with: 
+      title: ${{ inputs.title }}

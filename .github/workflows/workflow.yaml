@@ -1,0 +1,17 @@
+name: Reusable Workflow
+on:
+  workflow_call:
+    inputs:
+      title: 
+        description: "Custom file"
+        type: string
+        default: "Test text"
+        required: false
+
+jobs:
+  console-log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print title
+        run: echo '${{ inputs.title }}'
+        
